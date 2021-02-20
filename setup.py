@@ -38,7 +38,7 @@ class Publish(Command):
         pass
 
     def run(self):
-        os.system('python setup.py sdist bdist_wheel')
+        os.system('python setup.py sdist bdist_wheel --universal')
 
         sdist = 'dist/%s-%s.tar.gz' % (MYNAME, meta['__version__'])
         wheel = (

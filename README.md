@@ -5,9 +5,9 @@
 
 # Undent
 
-Undent turns multiline strings in source code (which are indented, have
-inserted newlines, etc) into their intended, beautiful, human-readable
-strings.
+Undent turns multiline strings in source code (which may be indented,
+have inserted newlines, etc) into their intended, beautiful,
+human-readable strings.
 
 To do this, `undent()`
 
@@ -36,14 +36,15 @@ Just import `undent()` and give it a string.
 >>> undent('''
     indented!
   not intended!''')
-
-'''  indented!
+'''
+    indented!
 not intended!'''
 ```
 
-that's it! `undent()` returns a beautiful, human-readable string.
+That's it. `undent()` returns a beautiful, human-readable string.
 
-`undent(s, wrap=False, strip=True)` takes two, optional arguments.
+`undent(s, wrap=False, strip=True)` additionally takes two, optional
+arguments.
 
 #### wrap
 

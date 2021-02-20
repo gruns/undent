@@ -5,8 +5,8 @@
 
 # Undent
 
-Undent turns multilined strings formatted for source code (indented,
-newlines inserted, etc) into their intended, beautiful, human-readable
+Undent turns multiline strings in source code (which are indented, have
+inserted newlines, etc) into their intended, beautiful, human-readable
 strings.
 
 To do this, `undent()`

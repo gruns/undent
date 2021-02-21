@@ -42,15 +42,16 @@ def createEmail():
 
         Thank you for registering with email address
 
-          {emailAddr}.
+          {emailAddr}
 
         Welcome to the family! We'd love to hear from you; please email us
-        with any questions you have.''')
+        and say hi.''')
    return email
 ```
 
-`undent()` then dedents, formats, and returns a nice, human-readable
-string.
+`undent()` dedents, formats, and returns a nice, human-readable string,
+regardless of how the multiline string in the Python source is indented,
+formatted, or broken across multiple lines. (Like to adhere to PEP8)
 
 ```
 Hi Billy!

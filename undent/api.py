@@ -76,7 +76,7 @@ def combineParagraphs(paragraphs):
 def unwrap(paragraph):
     toks = [
         line.rstrip() if i == 0 else line.strip()
-        for i, line in enumerate(lines)]
+        for i, line in enumerate(paragraph.splitlines())]
     unwrapped = ' '.join(toks).rstrip()
     return unwrapped
 

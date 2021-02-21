@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 #
-# Undent - Intelligently undent text for output
+# Undent - Dedent and format multiline strings into human-readable output
 #
 # Ansgar Grunseid
 # grunseid.com
@@ -16,4 +16,5 @@ __license__ = 'MIT'
 __author__ = 'Ansgar Grunseid'
 __contact__ = 'grunseid@gmail.com'
 __url__ = 'https://github.com/gruns/undent'
-__description__ = 'Intelligently dedent text for output.'
+__description__ = (
+    'Dedent and format multiline strings into human-readable output.')

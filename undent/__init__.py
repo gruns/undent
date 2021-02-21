@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 #
-# Undent - Intelligently dedent strings for output
+# Undent - Dedent and format multiline strings into human-readable output
 #
 # Ansgar Grunseid
 # grunseid.com

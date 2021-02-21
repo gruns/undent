@@ -32,16 +32,35 @@ To do this, `undent()`
 Just import `undent()` and give it a string.
 
 ```python
->>> from undent import undent
->>> undent('''
-    indented!
-  not intended!''')
-'''
-    indented!
-not intended!'''
+from undent import undent
+
+def createEmail():
+    name = 'Billy'
+    emailAddr = 'billy@gmail.com'
+    email = undent(f'''
+        Hi {name}!
+
+        Thank you for registering with email address
+
+          {emailAddr}.
+
+        Welcome to the family! We'd love to hear from you; please email us
+        with any questions you have.''')
+   return email
 ```
 
-That's it. `undent()` returns a beautiful, human-readable string.
+`undent()` then dedents, formats, and returns a nice, human-readable
+string.
+
+```
+Hi Billy!
+
+Thank you for registering with email address
+
+  billy@gmail.com.
+
+Welcome to the family! We'd love to hear from you; please email us with any questions you have.
+```
 
 `undent(s, wrap=False, strip=True)` additionally takes two, optional
 arguments.

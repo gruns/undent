@@ -51,7 +51,7 @@ def createEmail():
 
 `undent()` dedents, formats, and returns a nice, human-readable string,
 regardless of how the multiline string in the Python source is indented,
-formatted, or broken across multiple lines. (Like to adhere to PEP8)
+formatted, or broken across multiple lines. (Like to adhere to PEP 8)
 
 ```
 Hi Billy!

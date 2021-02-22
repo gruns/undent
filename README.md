@@ -5,15 +5,15 @@
 
 # Undent
 
-Undent turns multiline strings in source code (which may be indented,
-have inserted newlines, etc) into their intended, beautiful,
-human-readable strings.
+Undent turns multiline source code strings -- which may be indented,
+bookended with whitespace, or contain newlines inserted to avoid long
+lines -- into beautiful, human-readable strings.
 
 To do this, `undent()`
 
   1. [Dedents](https://docs.python.org/3/library/textwrap.html#textwrap.dedent)
-     the string so common indentation added for source code formatting
-     isn't unintentionally preserved.
+     the multiline string so common indentation added for source code
+     formatting isn't unintentionally preserved.
 
   2. Strips preceeding and trailing whitespace, while preserving
      post-dedent indentation, so whitespace added for source code
@@ -21,10 +21,10 @@ To do this, `undent()`
 
   3. Unwraps paragraphs so newlines inserted for source code formatting
      aren't unintentionally preserved in the output, e.g. newlines
-     inserted to avoid lines wider than PEP 8's 80 characters per line.
+     inserted to adhere to PEP 8's 79 characters per line limit.
 
-     Or, optionally line wrap output paragraphs to your intended width,
-     e.g. 72 character per line.
+     Or, optionally line wrap paragraphs to a custom width, e.g. 72
+     character per line.
 
 
 ### Usage
@@ -44,14 +44,16 @@ def createEmail():
 
           {emailAddr}
 
-        Welcome to the family! We'd love to hear from you; please email us
-        and say hi.''')
+        Welcome to the family. We'd love to hear from you; please email us
+        and say hi!''')
+
    return email
 ```
 
-`undent()` dedents, formats, and returns a nice, human-readable string,
-regardless of how the multiline string in the Python source is indented,
-formatted, or broken across multiple lines. (Like to adhere to PEP 8)
+Above, `undent()` dedents, formats, and returns a nice, human-readable
+multiline string, regardless of how the multiline string in the Python
+source is indented, formatted, or broken across lines. (Like to adhere
+to PEP 8.)
 
 ```
 Hi Billy!
@@ -60,11 +62,10 @@ Thank you for registering with email address
 
   billy@gmail.com.
 
-Welcome to the family! We'd love to hear from you; please email us with any questions you have.
+Welcome to the family. We'd love to hear from you; please email us with any questions you have!
 ```
 
-`undent(s, wrap=False, strip=True)` additionally takes two, optional
-arguments.
+`undent(s, wrap=False, strip=True)` takes two, optional arguments.
 
 #### wrap
 
@@ -133,11 +134,9 @@ Once upon a time, there was a little girl named Goldilocks.
 ```
 
 
-### Example Behavior
+### Behavior Examples
 
-> 1. [Dedents](https://docs.python.org/3/library/textwrap.html#textwrap.dedent)
->    the string so indentation added for source code formatting isn't
->    preserved.
+#### 1. [Dedents](https://docs.python.org/3/library/textwrap.html#textwrap.dedent) the string so indentation added for source code formatting isn't preserved.
 
 ```python
 if True:
@@ -158,9 +157,7 @@ common
 is removed
 ```
 
-> 2. Strips preceeding and trailing whitespace, while preserving
->    post-dedent indentation, so whitespace added for source code
->    formatting isn't unintentionally preserved.
+#### 2. Strips preceeding and trailing whitespace, while preserving post-dedent indentation, so whitespace added for source code formatting isn't unintentionally preserved.
 
 ```python
 if True:
@@ -183,9 +180,7 @@ preceeding
 whitespace is removed
 ```
 
-> 3. Unwraps paragraphs so newlines inserted for source code formatting
->    aren't unintentionally preserved in the output, e.g. newlines
->    inserted to avoid lines wider than PEP 8's 80 characters per line.
+#### 3. Unwraps paragraphs so newlines inserted for source code formatting aren't unintentionally preserved in the output, e.g. newlines inserted to avoid lines wider than PEP 8's 80 characters per line.
 
 ```python
 if someIndentation:
@@ -211,13 +206,13 @@ Once upon a time, there was a little girl named Goldilocks. She went for a walk 
 At the table in the kitchen, there were three bowls of porridge. Goldilocks was hungry. She tasted the porridge from the first bowl.
 ```
 
-> Or, optionally line wrap output paragraphs to your intended width,
-> e.g. 72 character per line.
+#### Or, optionally line wrap output paragraphs to your intended width, e.g. 72 character per line.
 
 ```python
 if someIndentation:
     if moreIndentation:
         if evenDeeperIndentation:
+            wrap = 72
             print(undent(f'''
                 Once upon a time, there was a little girl named
                 Goldilocks. She went for a walk in the forest. Pretty
@@ -227,7 +222,7 @@ if someIndentation:
                 At the table in the kitchen, there were three bowls of
                 porridge. Goldilocks was hungry. She tasted the porridge
                 from the first bowl.
-            ''', 72))
+            ''', wrap))
 ```
 
 outputs

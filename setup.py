@@ -56,9 +56,9 @@ setup(
     author_email=meta['__contact__'],
     url=meta['__url__'],
     description=meta['__description__'],
-    long_description=('\n\n'.join([
+    long_description='\n\n'.join([
         meta['__title__'] + ' - ' + meta['__description__'],
-        'Information and documentation can be found at %s.' % meta['__url__']]))
+        'Information and documentation can be found at %s.' % meta['__url__']]),
     platforms=['any'],
     packages=find_packages(),
     include_package_data=True,

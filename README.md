@@ -65,17 +65,17 @@ Thank you for registering with email address
 Welcome to the family. We'd love to hear from you; please email us with any questions you have!
 ```
 
-`undent(s, wrap=False, strip=True)` takes two, optional arguments.
+`undent(s, width=False, strip=True)` takes two, optional arguments.
 
-#### wrap
+#### width
 
-(default: `False`) `wrap` is the maximum length of wrapped lines, in
-characters, or `False` to unwrap lines. If `wrap` is an integer, as long
-as there are no individual words in the input string longer than `wrap`,
-no output line will be wider than `wrap` characters. Examples:
+(default: `False`) `width` is the maximum length of wrapped lines, in
+characters, or `False` to unwrap lines. If `width` is an integer, as
+long as there are no individual words in the input string longer than
+`width`, no output line will be wider than `width` characters. Examples:
 
 ```python
-undent('Once upon a time, there was a little girl named Goldilocks.', wrap=30)
+undent('Once upon a time, there was a little girl named Goldilocks.', width=30)
 ```
 
 returns
@@ -89,7 +89,7 @@ Conversely,
 
 ```python
 undent('''Once upon a time, there was a
-little girl named Goldilocks.''', wrap=False)
+little girl named Goldilocks.''', width=False)
 ```
 
 returns
@@ -212,7 +212,7 @@ At the table in the kitchen, there were three bowls of porridge. Goldilocks was 
 if someIndentation:
     if moreIndentation:
         if evenDeeperIndentation:
-            wrap = 72
+            width = 72
             print(undent(f'''
                 Once upon a time, there was a little girl named
                 Goldilocks. She went for a walk in the forest. Pretty
@@ -222,7 +222,7 @@ if someIndentation:
                 At the table in the kitchen, there were three bowls of
                 porridge. Goldilocks was hungry. She tasted the porridge
                 from the first bowl.
-            ''', wrap))
+            ''', width))
 ```
 
 outputs

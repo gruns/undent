@@ -102,19 +102,19 @@ def lstripEmptyLines(s):
     return s
 
 
-def undent(s, wrap=False, strip=True):
+def undent(s, width=False, strip=True):
     s = dedent(s)
 
     if strip:
         s = lstripEmptyLines(s)  # preserve indentation; only strip empty lines
         s = s.rstrip()
 
-    if wrap is False:  # unwrap
+    if width is False:  # unwrap
         paragraphs = [
             (newlines, unwrap(p)) for newlines, p in splitIntoParagraphs(s)]
         s = combineParagraphs(paragraphs)
-    elif wrap:
-        width = DEFAULT_WRAP_WIDTH if wrap is True else wrap
+    elif width:
+        width = DEFAULT_WRAP_WIDTH if width is True else width
         paragraphs = [
             (newlines, fill(p, width)) for newlines, p in splitIntoParagraphs(s)]
         s = combineParagraphs(paragraphs)

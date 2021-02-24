@@ -6,10 +6,10 @@
 # Undent
 
 Undent turns multiline source code strings -- which may be indented,
-bookended with whitespace, or contain newlines inserted to avoid long
+bookended with whitespace, or contain newlines injected to avoid long
 lines -- into beautiful, human-readable strings.
 
-To do this, `undent()`
+To accomplish this, `undent()`
 
   1. [Dedents](https://docs.python.org/3/library/textwrap.html#textwrap.dedent)
      the multiline string so common indentation added for source code
@@ -44,8 +44,8 @@ def createEmail():
 
           {emailAddr}
 
-        Welcome to the family. We'd love to hear from you; please email us
-        and say hi!''')
+        We'd love to hear from you; please email us
+        and say hello!''')
 
    return email
 ```
@@ -62,7 +62,7 @@ Thank you for registering with email address
 
   billy@gmail.com.
 
-Welcome to the family. We'd love to hear from you; please email us with any questions you have!
+We'd love to hear from you; please email us and say hello!
 ```
 
 `undent(s, width=False, strip=True)` takes two, optional arguments.
@@ -134,9 +134,9 @@ Once upon a time, there was a little girl named Goldilocks.
 ```
 
 
-### Behavior Examples
+### Examples
 
-#### 1. [Dedents](https://docs.python.org/3/library/textwrap.html#textwrap.dedent) the string so indentation added for source code formatting isn't preserved.
+#### `undent()` [dedents](https://docs.python.org/3/library/textwrap.html#textwrap.dedent) the string so indentation added for source code formatting isn't preserved.
 
 ```python
 if True:
@@ -157,7 +157,7 @@ common
 is removed
 ```
 
-#### 2. Strips preceeding and trailing whitespace, while preserving post-dedent indentation, so whitespace added for source code formatting isn't unintentionally preserved.
+#### `undent()` strips preceeding and trailing whitespace, while preserving post-dedent indentation, so whitespace added for source code formatting isn't unintentionally preserved.
 
 ```python
 if True:
@@ -180,7 +180,7 @@ preceeding
 whitespace is removed
 ```
 
-#### 3. Unwraps paragraphs so newlines inserted for source code formatting aren't unintentionally preserved in the output, e.g. newlines inserted to avoid lines wider than PEP 8's 80 characters per line.
+#### `undent()` unwraps paragraphs so newlines inserted for source code formatting aren't unintentionally preserved in the output, e.g. newlines inserted to avoid lines wider than PEP 8's 80 characters per line.
 
 ```python
 if someIndentation:

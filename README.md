@@ -12,16 +12,15 @@ lines -- into beautiful, human-readable strings.
 To accomplish this, `undent()`
 
   1. [Dedents](https://docs.python.org/3/library/textwrap.html#textwrap.dedent)
-     the multiline string so common indentation added for source code
-     formatting isn't unintentionally preserved.
+     the multiline string to remove common indentation.
 
   2. Strips preceeding and trailing whitespace, while preserving
-     post-dedent indentation, so whitespace added for source code
-     formatting isn't unintentionally preserved.
+     post-dedent indentation, to remove whitespace added for source code
+     formatting.
 
-  3. Unwraps paragraphs so newlines inserted for source code formatting
-     aren't unintentionally preserved in the output, e.g. newlines
-     inserted to adhere to PEP 8's 79 characters per line limit.
+  3. Unwraps paragraphs to remove newlines inserted for source code
+     formatting. E.g. newlines inserted to adhere to PEP 8's 79
+     characters per line limit.
 
      Or, optionally line wrap paragraphs to a custom width, e.g. 72
      character per line.
@@ -29,7 +28,7 @@ To accomplish this, `undent()`
 
 ### Usage
 
-Just import `undent()` and give it a string.
+Just import `undent()` and give it a multiline string.
 
 ```python
 from undent import undent
@@ -50,10 +49,8 @@ def createEmail():
    return email
 ```
 
-Above, `undent()` dedents, formats, and returns a nice, human-readable
-multiline string, regardless of how the multiline string in the Python
-source is indented, formatted, or broken across lines. (Like to adhere
-to PEP 8.)
+Above, `undent()` dedents, formats, and wraps the multiline string into
+a beautiful, human-readable string.
 
 ```
 Hi Billy!

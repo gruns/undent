@@ -117,8 +117,10 @@ Alternatively
 
 ```python
 undent('''
+
     Once upon a time, there was a
     little girl named Goldilocks.
+
     ''', strip=False)
 ```
 
@@ -126,7 +128,9 @@ returns
 
 ```
 
+
 Once upon a time, there was a little girl named Goldilocks.
+
 
 ```
 

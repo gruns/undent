@@ -67,7 +67,7 @@ setup(
         'Natural Language :: English',
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Libraries',
-        'Development Status :: 4 - Beta',
+        'Development Status :: 5 - Production/Stable',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',

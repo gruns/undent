@@ -5,9 +5,13 @@
 
 # Undent
 
-Undent turns multiline source code strings -- which may be indented,
-bookended with whitespace, or contain newlines injected to avoid long
-lines -- into beautiful, human-readable strings.
+Undent turns source code strings into their intended human-readable
+strings.
+
+Strings in source code may be indented, bookended with whitespace, or
+contain newlines to adhere to code style guidelines. `undent()`
+gracefully removes such code style formatting and returns a string the
+original, intended string for human consumption.
 
 To accomplish this, `undent()`
 

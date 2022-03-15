@@ -10,8 +10,8 @@ strings.
 
 Strings in source code may be indented, bookended with whitespace, or
 contain newlines to adhere to code style guidelines. `undent()`
-gracefully removes such code style formatting and returns a string the
-original, intended string for human consumption.
+gracefully removes such code style formatting and returns the original,
+intended string for human consumption.
 
 To accomplish this, `undent()`
 

@@ -2,11 +2,11 @@
   <img src="logo.svg" width="300px" height="200px" alt="Undent">
 </div>
 
-
 # Undent
 
-Undent turns source code strings into their intended human-readable
-strings.
+Undent turns strings stored in source code, which may have newlines,
+tabs, and whitespace inserted to adhere to code formatting and linting
+rules, into human-readable strings.
 
 Strings in source code may be indented, bookended with whitespace, or
 contain newlines to adhere to code style guidelines. `undent()`
